@@ -3,7 +3,6 @@ import time
 import requests
 import urllib  
 import os
-import cs50
 
 url_list = {
 	'9231':'http://papers.xtremepapers.com/CIE/Cambridge International A and AS Level/Mathematics - Further (9231)/',
@@ -76,7 +75,7 @@ def main():
 
 	# get code
 	print('please provide the syllabus number of the papers you wants to download:', end ='')
-	url_key = cs50.get_string()
+	url_key = input()
 
 	if url_key in url_list:
 		print('detected syllabus code, processing...')
