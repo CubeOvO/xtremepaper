@@ -8,8 +8,8 @@ not sure whether will work in python 2, due to l:81
 * BeautifulSoup
 * requests
 * urllib
-* cs50 (but only a get_string() at l:79)
-  
+* ~~cs50 (but only a get_string() at l:79)~
+  
 ### input:
 * input syllabus code - currently support following syllabus code
 >'9231':'http://papers.xtremepapers.com/CIE/Cambridge International A and AS Level/Mathematics - Further (9231)/',
