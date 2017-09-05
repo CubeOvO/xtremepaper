@@ -17,6 +17,10 @@ url_list = {
 	'9708':'http://papers.xtremepapers.com/CIE/Cambridge International A and AS Level/Economics (9708)/',
 	'9709':'http://papers.xtremepapers.com/CIE/Cambridge International A and AS Level/Mathematics (9709)/'
 }
+online_url = 'https://papers.xtremepapers.com/CIE/Cambridge International A and AS Level/'
+url_online = {}
+
+
 
 def get_papers(url):
 
@@ -71,6 +75,36 @@ def get_papers(url):
 	return 0
 
 
+def get_code():
+
+	html = requests.get(online_url)
+	soup = BeautifulSoup(html.text,'lxml')
+	datas = soup.select('td.autoindex_td > a ')
+	if datas != []:
+		# get rid of parent dir
+		datas.pop(0)
+		# 
+		for data in datas:
+			multi = 0
+			href_code = data.get('href')
+			code = str(data.get_text().split('(')[-1].strip(')'))
+			if not code.isdigit():
+				multi = 1
+				url_online[code[:4]] = 'http://papers.xtremepapers.com'+href_code
+				url_online[code[-4:]] = 'http://papers.xtremepapers.com'+href_code
+			else:
+				url_online[code] = 'http://papers.xtremepapers.com'+href_code 
+
+		# print(url_online)
+
+			
+	else:
+		print('NetWork error')
+		return -1
+
+
+
+
 def main():
 
 	# get code
@@ -78,13 +112,32 @@ def main():
 	url_key = input()
 
 	if url_key in url_list:
+
 		print('detected syllabus code, processing...')
 		get_papers(url_list[url_key])
-		
-	else:
-		print('syllabus code did not detected')
+
+	elif url_key.isdigit():
+
+		print('syllabus code did not match local database, do you wish to get online database for syllabus code?')
+		ans = input()
+		if ans == 'y' or ans == 'yes':
+			print('Searching at online data base at {}'.format(online_url))
+			get_code()
+			if url_key in url_online:
+				print('detected syllabus code, processing...')
+				get_papers(url_online[url_key])
+			else:
+				print('invalid syllabus code.')
+		else:
+			print('invalid syllabus code.')
+
+	elif url_key.startswith('http://') or url_key.startswith('https://'):
+
+		print('url detected')
 		print('downloading form the website {}'.format(url_key))
 		get_papers(url_key)
 
+	else:
+		print('invalid input please check your syllabus code / start your url with http')
 if __name__ == '__main__':
 	main()
