@@ -29,18 +29,19 @@ not sure whether will work in python 2, due to l:81
 * input url - please input similar url at above, where the links in the webpages links directly to pdfs you want to download but not the subject(s) o.w. this programe won't work (although it'll acts like it worked)
 
 ### Example input 1 - input local syllabus code:
-    please provide the syllabus number of the papers you wants to download:9701
-    detected syllabus code, processing...
-    Now starts to download, this may (defintely) take some times so you may want to
-    go and grab yourself some drink and let this programe run alone.
-    file already exists 9701_33_5RP_AFP_TSS.pdf
-    file already exists 9701_33_CI_4RP_AFP_TSS.pdf
-    file already exists 9701_Chemistry_Data_Booklet_2016.pdf
-    detected new file. successfully downloaded 9701_Chemistry_Data_Booklet_specimen_
-    2016.pdf
-    detected new file. successfully downloaded 9701_Chemistry_Example_Candidate_Resp
-    detected new file. successfully downloaded 9701_nos_as_4.pdf
-    detected new file. successfully downloaded 9701_nos_as_5.pdf
+
+	please provide the syllabus number of the papers you wants to download:9701
+	detected syllabus code, processing...
+	Now starts to download, this may (defintely) take some times so you may want to
+	go and grab yourself some drink and let this programe run alone.
+	file already exists 9701_33_5RP_AFP_TSS.pdf
+	file already exists 9701_33_CI_4RP_AFP_TSS.pdf
+	file already exists 9701_Chemistry_Data_Booklet_2016.pdf
+	detected new file. successfully downloaded 9701_Chemistry_Data_Booklet_specimen_
+	2016.pdf
+	detected new file. successfully downloaded 9701_Chemistry_Example_Candidate_Resp
+	detected new file. successfully downloaded 9701_nos_as_4.pdf
+	detected new file. successfully downloaded 9701_nos_as_5.pdf
     ...
 
 
