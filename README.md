@@ -1,8 +1,12 @@
 # xtremepaper downloader
 
 my current python version : 3.5.2
-*now is quicker than ever before - multiprocessing implimented. download all the papers in a few minitues.
-not sure whether will work in python 2, due to l:81
+
+
+*now is quicker than ever before - multiprocessing implimented. download all the papers in a few minitues.*
+
+
+*won't work in py2*
 
 ### required module:
 * BeautifulSoup
