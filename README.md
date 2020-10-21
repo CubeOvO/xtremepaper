@@ -8,7 +8,7 @@ my current python version : 3.5.2
 
 *won't work in py2*
  
-*I don't have time to update this project and time soon, but see https://github.com/aaqsr/xtreme-papers-dl where it currently works for O LEVEL papers as of now
+*I don't have time to update this project any time soon, but aaqsr is currently working on it https://github.com/aaqsr/xtreme-papers-dl and it currently works for O LEVEL papers
 ### required module:
 * BeautifulSoup
 * requests
